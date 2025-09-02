@@ -5,15 +5,14 @@ class Animal {
   constructor(name, health = 100) {
     this.name = name;
     this.health = health;
-    
 
     Animal.alive.push(this);
   }
 }
 
 class Herbivore extends Animal {
-  constructor(health = 100, name) {
-    super(health, name);
+  constructor(name, health = 100) {
+    super(name, health);
     this.hidden = false;
   }
 
@@ -23,8 +22,8 @@ class Herbivore extends Animal {
 }
 
 class Carnivore extends Animal {
-  constructor(health = 100, name) {
-    super(health, name);
+  constructor(name, health = 100) {
+    super(name, health);
   }
 
   bite(obj) {
